@@ -1,0 +1,50 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of CIActive
+ *
+ * @author OEM
+ */
+class CIFriends extends CI_Model{
+	private $users;
+    //put your code here
+    public function __construct() {
+        parent::__construct();
+		$users=array();
+		for($i=1;$i<10717;$i++){
+			$users[$i] = 0;
+		}
+    }
+	
+	public function no_friends($user_id) {
+        $sql = "SELECT fr1,fr2 FROM friends WHERE friend_id = {$user_id}";
+		$query = $this->db->query($sql);
+		
+		foreach ($query->result() as $row)
+		{
+		   $fr1 = $row->fr1;
+		   $fr2 = $row->fr2;
+		   $users[$fr1]=1;
+		   $users[$fr2]=1;
+		}
+		
+		$i=1;
+		int $j=0;
+		$no_frinds = array();
+		foreach($users as $key => $user){
+			if($user==0){
+				$no_frinds[$j]=$key;
+				$j++;
+			}
+			$i++;
+		}
+		
+		print_r($no_frinds);
+    }
+}

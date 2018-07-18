@@ -1,0 +1,106 @@
+body,html{
+    padding:0px;
+    margin:0px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    float:left;
+    width:100%;
+    margin:10px 0px;
+    cursor:pointer;
+}
+
+.title,.title_select{
+    padding:10px;
+    text-align: left;
+    color:black;
+    width:100%;
+    float:left;
+    border:2px solid white;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+.title_select{
+    background:lightcoral;
+}   
+.header.active .title_select{
+    background:lightgreen;
+}
+.title{  
+    background:lightblue;
+}
+.header .half{
+    width:50%;
+    float:left;
+    text-align:left;
+    border:2px solid white;
+    background:lightblue;
+    color:black;
+    padding:0px 10px;
+}
+
+.lang{
+    width:100%;
+}
+
+.lang .choose{
+    padding:10px;
+    text-align: center;
+    background:gray;
+    color:white;
+    width:50%;
+    float:left;
+    border:2px solid white;
+    font-weight:bold;
+}
+
+.lang .choose.active{
+    background:lightgray !important;
+    color:red;
+}
+
+.pagination{
+    padding:2px 10px;
+    width:100%;
+    float:left;
+    background:lightblue;
+}
+
+.pagination div{
+    float:left;
+    padding:10px;
+    border:2px solid white;
+    background:white;
+    margin-right:10px;
+}
+
+.card{
+    width:100%;
+    float:left;
+    margin:10px 0px;
+}
+
+.red,.green{
+    width:100%;
+    height:100px;
+    margin:10px 0px;
+    border:2px solid yellow;
+    color:white;
+    font-size:24px;
+    justify-content: center;
+    display: flex; /* added */
+    align-items: center;
+    cursor:pointer;
+}
+
+.green{
+    background:green;
+}
+
+.red{
+    background:red;
+}
